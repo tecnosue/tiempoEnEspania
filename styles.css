@@ -1,0 +1,85 @@
+/* Estilos personalizados para la aplicación */
+
+body {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+}
+
+footer {
+    margin-top: auto;
+}
+
+/* Estilos para las tarjetas */
+.card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    font-weight: bold;
+}
+
+/* Estilos para los iconos del tiempo */
+#iconoTiempo {
+    width: 80px;
+    height: 80px;
+}
+
+/* Estilos para la tabla de predicción por horas */
+.table-forecast {
+    margin-bottom: 0;
+}
+
+.table-forecast th, .table-forecast td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.weather-icon-small {
+    width: 30px;
+    height: 30px;
+}
+
+/* Estilos para el spinner de carga */
+#loading {
+    padding: 50px;
+}
+
+/* Mejoras para dispositivos móviles */
+@media (max-width: 767.98px) {
+    .card {
+        margin-bottom: 20px;
+    }
+    
+    .table-responsive {
+        font-size: 0.9rem;
+    }
+}
+
+/* Animación para el botón de consulta */
+#consultarTiempo:not(:disabled) {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(0, 123, 255, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+    }
+}
